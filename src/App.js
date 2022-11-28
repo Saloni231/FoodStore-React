@@ -22,9 +22,9 @@ function App() {
           <Route path='/Recipes' element={<Recipes/>}/>
           <Route path='/Blog' element={<Blog/>}/>
           <Route path='/ContactUs' element={<ContactUs/>}/>
-        </Route>
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Register' element={<Register/>}/>
+        </Route>
       </Routes>
       </BrowserRouter>
     </div>

@@ -123,7 +123,7 @@ function Register() {
 
   return (
     <React.Fragment>
-      <div className="ui segment" style={background}>
+      <div style={background}>
         <div className="ui two column grid">
           <div className="card border-dark signup-card">
             <h1 className="ui purple ribbon label" style={heading}>

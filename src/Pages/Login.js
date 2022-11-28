@@ -72,7 +72,7 @@ function Login() {
 
   return (
     <React.Fragment>
-    <div className="ui segment" style={background}>
+    <div style={background}>
         <div className="ui two column grid">
             <div className="middle aligned column">
                 <img src={login} className="img-fluid rounded-start" alt="..."/>

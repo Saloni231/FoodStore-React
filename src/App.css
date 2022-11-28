@@ -4,12 +4,14 @@
 
 .login-card{
   margin: 80px;
+  margin-left: 100px;
   width: 420px;
   padding: 40px;
 }
 
 .signup-card{
   margin: 40px;
+  margin-left: 60px;
   width: 600px;
   padding: 20px;
 }
