@@ -1,10 +1,10 @@
 import { getAuth } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ref, onValue } from "firebase/database";
+import { ref ,onValue } from "firebase/database";
 import { db } from "../index";
-import profile from "./Images/profile.webp";
-import "./pages.css";
+import profile from "./Images/profile.webp"
+import './pages.css'
 
 function Profile() {
   const auth = getAuth();
@@ -41,14 +41,14 @@ function Profile() {
   });
 
   const cardCss = {
-    width: "500px",
-    marginTop: "60px",
-    height: "349px",
-    marginBottom: "60px",
-    background: "black",
-    padding: "20px",
-    fontFamily: "Georgia",
-    fontSize: "15px",
+    width: "500px", 
+    marginTop: "43px", 
+    height: "400px", 
+    marginBottom:"40px", 
+    background: "rgb(255,200,0)", 
+    padding: "30px",
+    fontFamily: 'Georgia',
+    fontSize: "18px"
   };
 
   return (
@@ -56,20 +56,13 @@ function Profile() {
       <div className="row">
         <div className="col-4"></div>
         <div class="card col-4" style={cardCss}>
-          <img
-            src={profile}
-            class="card-img-top center"
-            alt="..."
-            style={{ width: "120px", height: "120px", marginLeft: "180px" }}
-          />
-          <div class="card-body" style={{ textAlign: "center" }}>
-            <p class="card-text text-info">First Name : {firstName}</p>
-            <p class="card-text text-info">Last Name : {lastName}</p>
-            <p class="card-text text-info">Email : {email}</p>
-            <p class="card-text text-info">Mobile : {mobile}</p>
-            <button type="button" class="btn btn-info" onClick={signingOut}>
-              Sign Out
-            </button>
+          <img src={profile} class="card-img-top center" alt="..."  style={{width: "120px", height: "120px", marginLeft: "38%"}}/>
+          <div class="card-body" style={{textAlign: "center"}}>
+            <p class="card-text text-dark">First Name : {firstName}</p>
+            <p class="card-text text-dark">Last Name : {lastName}</p>
+            <p class="card-text text-dark">Email : {email}</p>
+            <p class="card-text text-dark">Mobile : {mobile}</p>
+            <button type="button" class="btn btn-dark" onClick={signingOut}>Sign Out</button>
           </div>
         </div>
       </div>

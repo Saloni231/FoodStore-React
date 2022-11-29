@@ -7,7 +7,7 @@ import about from './Images/about.png'
 
 function About() {
   return (
-    <div>
+    <div style={{background: "white"}}>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <img src={about} className="imgPlate" />
       </div>

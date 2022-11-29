@@ -29,11 +29,7 @@ p {
 }
 
 #img {
-
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  margin-top: -96px;
+  margin-left: 80px;
   height: 400px;
   width: 450px;
 }
@@ -80,3 +76,10 @@ p {
   float: right;
   padding-right: 10px;
 }
+
+#burgerimg {
+
+  height: 400px;
+  width: 550px;
+  margin-left: 120px;
+ }

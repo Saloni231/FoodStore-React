@@ -14,11 +14,13 @@ const titleCss = {
 };
 
 const heading = {
-  background: "cyan",
   textAlign: "center",
   fontSize: "50px",
   "font-family": "Georgia",
-  padding: "10px",
+  padding: "17px",
+  fontWeight: 'bold',
+  background: 'rgb(255,200,0)',
+  color: 'white'
 };
 
 export class Recipes extends Component {

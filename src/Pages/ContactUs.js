@@ -4,8 +4,8 @@ import "./pages.css";
 
 export default function ContactUs() {
   return (
-    <div class="row" style={{ padding: "47px", margin: "20px" }}>
-      <div class="col">
+    <div class="row" style={{ padding: "57px", background: "rgb(255,200,0)" }}>
+      <div class="col" style={{marginLeft: "60px"}}>
         <h1>
           {" "}
           Request A <font color="#FFFFFF"> Call Back</font>

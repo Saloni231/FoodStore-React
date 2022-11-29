@@ -9,7 +9,7 @@ function Layout() {
   const app = getAuth();
 
   const activeLink = {
-    color: "yellow",
+    color: "rgb(255,223,0)",
   };
 
   const nonActiveLink = {
@@ -20,7 +20,7 @@ function Layout() {
 
   return (
     <React.Fragment>
-      <nav className="ui pointing menu bg-dark navbar navbar-expand-md">
+      <nav className="ui pointing menu bg-dark navbar navbar-expand-md" style={{marginBottom: "0"}}>
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -40,7 +40,7 @@ function Layout() {
                 style={{
                   fontWeight: "bold",
                   fontSize: "20px",
-                  color: "yellow",
+                  color: "rgb(255,223,0)",
                 }}
               >
                 {" "}
