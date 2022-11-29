@@ -74,12 +74,11 @@ function Login() {
 
   return (
     <React.Fragment>
-      <div>
         <div className="ui two column grid">
           <div className="middle aligned column">
-            <img src={login} className="img-fluid rounded-start" alt="..." />
+            <img src={login} className="img-fluid rounded-start" alt="login" style={{height: "400px", marginLeft: "80px"}} />
           </div>
-          <div className="card border-dark login-card">
+          <div className="card border-dark" id="login-card">
             <h1 className="ui teal ribbon label" style={heading}>
               Login
             </h1>
@@ -135,7 +134,6 @@ function Login() {
             </form>
           </div>
         </div>
-      </div>
     </React.Fragment>
   );
 }

@@ -139,7 +139,7 @@ function Register() {
     <React.Fragment>
       <div style={background}>
         <div className="ui two column grid">
-          <div className="card border-dark signup-card">
+          <div className="card border-dark" id="signup-card">
             <h1 className="ui purple ribbon label" style={heading}>
               Sign Up
             </h1>

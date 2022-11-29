@@ -8,6 +8,14 @@ import about from './Images/about.png'
 function About() {
   return (
     <div style={{background: "white"}}>
+      <hr
+        style={{
+          background: 'rgb(255,200,0)',
+          height: "10px",
+          marginTop: "0",
+          opacity: "1"
+        }}
+      />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <img src={about} className="imgPlate" />
       </div>
@@ -25,7 +33,7 @@ function About() {
           Delivered To Your Home Faster Than Supermarkets, Only On Food Store.
         </div>
       </div>
-      <div style={{ marginTop: "40px" }}>
+      <div style={{ marginTop: "30px" }}>
         <Container>
           <Row>
             <Col>

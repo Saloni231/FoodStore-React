@@ -54,8 +54,8 @@ function Profile() {
   return (
     <React.Fragment>
       <div className="row">
-        <div className="col-4"></div>
-        <div class="card col-4" style={cardCss}>
+        <div className="col-3"></div>
+        <div class="card col-7" style={cardCss}>
           <img src={profile} class="card-img-top center" alt="..."  style={{width: "120px", height: "120px", marginLeft: "38%"}}/>
           <div class="card-body" style={{textAlign: "center"}}>
             <p class="card-text text-dark">First Name : {firstName}</p>
