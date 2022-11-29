@@ -1,5 +1,6 @@
 .App {
   text-align: justify;
+  background-color: tomato;
 }
 
 .login-card{
@@ -30,4 +31,8 @@
 
 p{
   color: red;
+}
+
+#myBlueDiv {
+  align-self: center;
 }

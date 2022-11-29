@@ -7,6 +7,7 @@ import 'semantic-ui-css/semantic.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_TIR2DodJgLOPb3nkhKbm2kT9ZobZrng",
@@ -21,6 +22,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+export const db = getDatabase(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

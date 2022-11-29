@@ -1,8 +1,12 @@
-import React from "react";
+import { getAuth } from "firebase/auth";
+import React, { useEffect, useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import registered from './r-circle.svg'
 
 function Layout() {
+
+    const app = getAuth();
+
     const activeLink = {
         color: "yellow",
       };
@@ -55,8 +59,9 @@ function Layout() {
                 <NavLink className="item" to={"/ContactUs"} style={({ isActive }) => (isActive ? activeLink : nonActiveLink)}>
                   Contact us
                 </NavLink>
-                <button class="ui inverted yellow button" onClick={() => {navigate('/Login')}}>Login</button>
-                <button class="ui inverted button" onClick={() => {navigate('/Register')}}>Register</button>
+                {!app.currentUser?<button className="ui inverted yellow button" onClick={() => {navigate('/Login')}}>Login</button>:null}
+                {!app.currentUser?<button className="ui inverted button" onClick={() => {navigate('/Register')}}>Register</button>:null}
+                {app.currentUser?<NavLink className="item" to={"/Profile"} style={({ isActive }) => (isActive ? activeLink : nonActiveLink)}>Profile</NavLink>:null}
                 </div>
               </div>
             </div>

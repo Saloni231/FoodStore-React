@@ -99,7 +99,6 @@ function Register() {
         .then((userCredential) => {
           event.preventDefault();
           const user = userCredential.user;
-          alert(formValues.email);
           setErrorCode(null);
           const userListRef = ref(database, "users/");
           const newUserRef = push(userListRef);
@@ -113,6 +112,8 @@ function Register() {
           }).catch((error) => {
             console.log(error);
           });
+          alert("Registered Successfully");
+          navigate("/")
         })
         .catch((error) => {
           setErrorCode(error.code);
@@ -120,6 +121,10 @@ function Register() {
         });
     }
   };
+
+  useEffect(() => {
+    console.log(formValues)
+},[errorMsg])
 
   return (
     <React.Fragment>

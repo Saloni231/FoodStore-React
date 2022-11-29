@@ -7,10 +7,6 @@ function Login() {
 
     const navigate = useNavigate()
 
-    const background = {
-        'background-color': 'tomato'
-    }
-
     const heading = {
         'height': '40px',
         'font-size': '20px',
@@ -57,8 +53,9 @@ function Login() {
         if(Object.keys(errorMsg).length === 0 && isSubmit){
             signInWithEmailAndPassword(auth, formValues.email, formValues.password).then((userCredential) => {
                 const user = userCredential.user;
-                navigate('Home')
-                alert(formValues.email)
+                console.log(user)
+                alert("Logined Successfully")
+                navigate("/")
                 setErrorCode(null)
             }).catch((error) => {
                 setErrorCode(error.code)
@@ -72,7 +69,7 @@ function Login() {
 
   return (
     <React.Fragment>
-    <div style={background}>
+    <div>
         <div className="ui two column grid">
             <div className="middle aligned column">
                 <img src={login} className="img-fluid rounded-start" alt="..."/>
@@ -89,6 +86,7 @@ function Login() {
                         </div>
                         {Object.keys(errorMsg).length !== 0 ?<p>{errorMsg.email}</p>:null}
                     </div>
+                    <br/>
                     <div className="field">
                         <div id='heading'>Password</div>
                         <div className="ui left icon input">
