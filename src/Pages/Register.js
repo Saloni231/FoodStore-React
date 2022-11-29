@@ -90,7 +90,7 @@ function Register() {
     setErrorMsg(validate(formValues));
     setIsSubmit(true);
 
-    if (Object.keys(errorMsg).length === 0 && isSubmit) {
+    if (Object.keys(errorMsg).length === 0) {
       createUserWithEmailAndPassword(
         auth,
         formValues.email,

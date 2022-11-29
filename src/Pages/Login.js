@@ -50,7 +50,7 @@ function Login() {
         setErrorMsg(validate(formValues))
         setIsSubmit(true)
         
-        if(Object.keys(errorMsg).length === 0 && isSubmit){
+        if(Object.keys(errorMsg).length === 0){
             signInWithEmailAndPassword(auth, formValues.email, formValues.password).then((userCredential) => {
                 const user = userCredential.user;
                 console.log(user)
