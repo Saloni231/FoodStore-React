@@ -1,17 +1,17 @@
 import React from "react";
 import "./pages.css";
 import { Card, CardGroup, Col, Container, Row } from "react-bootstrap";
-import about from './Images/about.png'
+import about from "./Images/about.png";
 
 function Blog() {
   return (
-    <div style={{background: "white"}}>
+    <div style={{ background: "white" }}>
       <hr
         style={{
-          background: 'rgb(255,200,0)',
+          background: "rgb(255,200,0)",
           height: "10px",
           marginTop: "0",
-          opacity: "1"
+          opacity: "1",
         }}
       />
       <div style={{ display: "flex", justifyContent: "center" }}>
@@ -41,7 +41,12 @@ function Blog() {
                   className="cardimg"
                 />
                 <Card.Body>
-                  <Card.Title>Vegan Chickpea Curry<div class="ui top left attached black label">02 FEB 2019</div></Card.Title>
+                  <Card.Title>
+                    Vegan Chickpea Curry
+                    <div class="ui top left attached black label">
+                      02 FEB 2019
+                    </div>
+                  </Card.Title>
                   <Card.Text className="text-secondary">
                     Loaded with protein, this vegan chickpea curry is mostly
                     made with pantry staples. Throw in fresh or frozen spinach
@@ -58,7 +63,12 @@ function Blog() {
                   className="cardimg"
                 />
                 <Card.Body>
-                  <Card.Title>Instant No Yeast Naan<div class="ui top left attached black label">02 FEB 2019</div></Card.Title>
+                  <Card.Title>
+                    Instant No Yeast Naan
+                    <div class="ui top left attached black label">
+                      02 FEB 2019
+                    </div>
+                  </Card.Title>
                   <Card.Text className="text-secondary">
                     This improvised meal shows how incorporating a few Indian
                     ingredients into your meals can make them a little more
@@ -76,7 +86,12 @@ function Blog() {
                   className="cardimg"
                 />
                 <Card.Body>
-                  <Card.Title><div class="ui top left attached black label">02 FEB 2019</div>Vegan Curried Carrot Soup</Card.Title>
+                  <Card.Title>
+                    <div class="ui top left attached black label">
+                      02 FEB 2019
+                    </div>
+                    Vegan Curried Carrot Soup
+                  </Card.Title>
                   <Card.Text className="text-secondary">
                     Creamy and fragrant with curry powder and coconut milk, this
                     soup is one of the tastiest ways to use up that bunch of

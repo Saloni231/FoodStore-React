@@ -8,15 +8,15 @@ const heading = {
   "font-size": "55px",
   "font-family": "Georgia",
   color: "white",
-  'font-weight': 'bolder',
-  'text-align': 'left'
+  "font-weight": "bolder",
+  "text-align": "left",
 };
 
 const subHeading = {
   "font-size": "15px",
   "font-family": "Georgia",
   color: "grey",
-}
+};
 
 let strings = new LocalizedStrings({
   en: {
@@ -28,7 +28,7 @@ let strings = new LocalizedStrings({
 function Home() {
   const navigate = useNavigate();
   return (
-    <div class="row" style={{marginLeft: "150px", marginTop: "57px"}}>
+    <div class="row" style={{ marginLeft: "150px", marginTop: "57px" }}>
       <div class="col-4">
         <h1 style={heading}>{strings.title}</h1>
         <br />
@@ -37,7 +37,13 @@ function Home() {
           fillings—usually a patty of ground meat, typically beef—placed inside
           a sliced bun or bread roll.
         </label>
-        <button class="ui inverted yellow button" style={{marginTop: "20px", marginBottom: "10px"}} onClick={() => {navigate("/Recipes")}}>
+        <button
+          class="ui inverted yellow button"
+          style={{ marginTop: "20px", marginBottom: "10px" }}
+          onClick={() => {
+            navigate("/Recipes");
+          }}
+        >
           Order Now
         </button>
       </div>

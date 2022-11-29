@@ -18,9 +18,9 @@ const heading = {
   fontSize: "50px",
   "font-family": "Georgia",
   padding: "17px",
-  fontWeight: 'bold',
-  background: 'rgb(255,200,0)',
-  color: 'white'
+  fontWeight: "bold",
+  background: "rgb(255,200,0)",
+  color: "white",
 };
 
 export class Recipes extends Component {

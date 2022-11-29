@@ -20,7 +20,10 @@ function Layout() {
 
   return (
     <React.Fragment>
-      <nav className="ui pointing menu bg-dark navbar navbar-expand-md" style={{marginBottom: "0"}}>
+      <nav
+        className="ui pointing menu bg-dark navbar navbar-expand-md"
+        style={{ marginBottom: "0" }}
+      >
         <div className="container-fluid">
           <button
             className="navbar-toggler"

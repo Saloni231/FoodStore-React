@@ -74,66 +74,71 @@ function Login() {
 
   return (
     <React.Fragment>
-        <div className="ui two column grid">
-          <div className="middle aligned column">
-            <img src={login} className="img-fluid rounded-start" alt="login" style={{height: "400px", marginLeft: "80px"}} />
-          </div>
-          <div className="card border-dark" id="login-card">
-            <h1 className="ui teal ribbon label" style={heading}>
-              Login
-            </h1>
-            <br />
-            {errorCode ? (
-              <div class="alert alert-danger" role="alert">
-                Incorrect Email ID or Password
-              </div>
-            ) : null}
-            <form
-              className="ui form"
-              style={{ padding: "20px" }}
-              onSubmit={loginClicked}
-            >
-              <div className="field">
-                <div id="heading">Email ID</div>
-                <div className="ui left icon input">
-                  <input
-                    type="text"
-                    placeholder="Email ID"
-                    name="email"
-                    value={formValues.email}
-                    onChange={valueChange}
-                  />
-                  <i className="user icon"></i>
-                </div>
-                {Object.keys(errorMsg).length !== 0 ? (
-                  <p>{errorMsg.email}</p>
-                ) : null}
-              </div>
-              <br />
-              <div className="field">
-                <div id="heading">Password</div>
-                <div className="ui left icon input">
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    value={formValues.password}
-                    onChange={valueChange}
-                  />
-                  <i className="lock icon"></i>
-                </div>
-                {Object.keys(errorMsg).length !== 0 ? (
-                  <p>{errorMsg.password}</p>
-                ) : null}
-              </div>
-              <div className="ui center aligned basic segment">
-                <button className="ui teal submit button" type="submit">
-                  Login
-                </button>
-              </div>
-            </form>
-          </div>
+      <div className="ui two column grid">
+        <div className="middle aligned column">
+          <img
+            src={login}
+            className="img-fluid rounded-start"
+            alt="login"
+            style={{ height: "400px", marginLeft: "80px" }}
+          />
         </div>
+        <div className="card border-dark" id="login-card">
+          <h1 className="ui teal ribbon label" style={heading}>
+            Login
+          </h1>
+          <br />
+          {errorCode ? (
+            <div class="alert alert-danger" role="alert">
+              Incorrect Email ID or Password
+            </div>
+          ) : null}
+          <form
+            className="ui form"
+            style={{ padding: "20px" }}
+            onSubmit={loginClicked}
+          >
+            <div className="field">
+              <div id="heading">Email ID</div>
+              <div className="ui left icon input">
+                <input
+                  type="text"
+                  placeholder="Email ID"
+                  name="email"
+                  value={formValues.email}
+                  onChange={valueChange}
+                />
+                <i className="user icon"></i>
+              </div>
+              {Object.keys(errorMsg).length !== 0 ? (
+                <p>{errorMsg.email}</p>
+              ) : null}
+            </div>
+            <br />
+            <div className="field">
+              <div id="heading">Password</div>
+              <div className="ui left icon input">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  value={formValues.password}
+                  onChange={valueChange}
+                />
+                <i className="lock icon"></i>
+              </div>
+              {Object.keys(errorMsg).length !== 0 ? (
+                <p>{errorMsg.password}</p>
+              ) : null}
+            </div>
+            <div className="ui center aligned basic segment">
+              <button className="ui teal submit button" type="submit">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </React.Fragment>
   );
 }

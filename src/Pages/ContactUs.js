@@ -1,11 +1,42 @@
-import React from "react";
+import { getDatabase, ref, set, push } from "firebase/database";
+import React, { useState } from "react";
 import companyLogo from "./Images/food.jfif";
 import "./pages.css";
 
 export default function ContactUs() {
+  const database = getDatabase();
+
+  const inputs = {
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  };
+
+  const [formValues, setFormValues] = useState(inputs);
+
+  const inputChange = (event) => {
+    const { name, value } = event.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const submitClicked = () => {
+    const userListRef = ref(database, "messages/");
+    const newUserRef = push(userListRef);
+
+    set(newUserRef, {
+      name: formValues.name,
+      phone: formValues.phone,
+      email: formValues.email,
+      message: formValues.message,
+    }).catch((error) => {
+      console.log(error);
+    });
+  };
+
   return (
     <div class="row" style={{ padding: "57px", background: "rgb(255,200,0)" }}>
-      <div class="col" style={{marginLeft: "60px"}}>
+      <div class="col" style={{ marginLeft: "60px" }}>
         <h1>
           {" "}
           Request A <font color="#FFFFFF"> Call Back</font>
@@ -18,6 +49,8 @@ export default function ContactUs() {
             type="text"
             placeholder="Name"
             name="name"
+            value={formValues.name}
+            onChange={inputChange}
           />{" "}
           <br />
           <input
@@ -25,13 +58,17 @@ export default function ContactUs() {
             id="inputdefault"
             placeholder="Phone number"
             name="phone"
+            value={formValues.phone}
+            onChange={inputChange}
           />
           <br />
           <input
             class="form-control"
             id="inputdefault"
             placeholder="Email Id"
-            name="EMail"
+            name="email"
+            value={formValues.email}
+            onChange={inputChange}
           />
           <br />
           <textarea
@@ -39,11 +76,14 @@ export default function ContactUs() {
             cols="55"
             rows="3"
             placeholder="Message"
+            value={formValues.message}
+            onChange={inputChange}
           ></textarea>
           <button
             type="button"
             class="btn btn-dark"
             style={{ marginTop: "10px" }}
+            onClick={submitClicked}
           >
             Submit
           </button>

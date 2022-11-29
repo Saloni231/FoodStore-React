@@ -3,17 +3,17 @@ import { Card, Col, Container, Figure, Row } from "react-bootstrap";
 import { IconContext } from "react-icons";
 import { BsArrowRight } from "react-icons/bs";
 import "./pages.css";
-import about from './Images/about.png'
+import about from "./Images/about.png";
 
 function About() {
   return (
-    <div style={{background: "white"}}>
+    <div style={{ background: "white" }}>
       <hr
         style={{
-          background: 'rgb(255,200,0)',
+          background: "rgb(255,200,0)",
           height: "10px",
           marginTop: "0",
-          opacity: "1"
+          opacity: "1",
         }}
       />
       <div style={{ display: "flex", justifyContent: "center" }}>
@@ -26,7 +26,7 @@ function About() {
             textAlign: "center",
             fontSize: "13px",
             fontFamily: "sans-serif",
-            fontWeight: "bold"
+            fontWeight: "bold",
           }}
         >
           Food Store Is The Only Online Supermarket You Need. Daily Needs
@@ -49,7 +49,9 @@ function About() {
                     <Card.Body>
                       <Card.Title>Best Food</Card.Title>
                       <Card.Text>
-                        <div style={{ fontFamily: "sans-serif", color: "white" }}>
+                        <div
+                          style={{ fontFamily: "sans-serif", color: "white" }}
+                        >
                           An online store for high-quality commercial kitchen
                           equipment where restaurateurs can find everything
                           their business needs to function at its best. Some
@@ -75,7 +77,10 @@ function About() {
               <div id="parent">
                 <div className="yello"></div>
                 <div className="">
-                  <img src={require("./Images/pageimg.jpg")} className="imgpage2" />
+                  <img
+                    src={require("./Images/pageimg.jpg")}
+                    className="imgpage2"
+                  />
                 </div>
               </div>
             </Col>

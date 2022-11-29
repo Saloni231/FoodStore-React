@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { getDatabase, ref, set, push } from "firebase/database";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router";
-import signUp from ".//Images/signUp.webp";
+import signUp from "./Images/signUp.webp";
 import { Form } from "semantic-ui-react";
 import "./pages.css";
 
 function Register() {
+  
   const navigate = useNavigate();
 
   const background = {
@@ -99,7 +100,8 @@ function Register() {
       formValues.mobile.length !== 0 &&
       formValues.password.length !== 0 &&
       formValues.confirmPassword.length !== 0
-    ) {
+    ) 
+    {
       createUserWithEmailAndPassword(
         auth,
         formValues.email,
