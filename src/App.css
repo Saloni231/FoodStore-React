@@ -36,3 +36,17 @@ p{
 #myBlueDiv {
   align-self: center;
 }
+
+#img {
+
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  margin-top: -96px;
+  height: 400px;
+  width: 450px;
+ }
+
+#backColor{
+  background-color: tomato;
+}
