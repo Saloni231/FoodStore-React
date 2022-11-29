@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ref ,onValue } from "firebase/database";
 import { db } from "../index";
-import profile from "./profile.webp"
+import profile from "./Images/profile.webp"
+import './pages.css'
 
 function Profile() {
   const auth = getAuth();

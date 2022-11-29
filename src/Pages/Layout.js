@@ -1,7 +1,8 @@
 import { getAuth } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
-import registered from './r-circle.svg'
+import registered from './Images/r-circle.svg'
+import './pages.css'
 
 function Layout() {
 

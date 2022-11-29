@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { getDatabase, ref, set, push } from "firebase/database";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router";
-import signUp from "./signUp.webp";
+import signUp from ".//Images/signUp.webp";
 import { Form } from "semantic-ui-react";
+import "./pages.css";
 
 function Register() {
   const navigate = useNavigate();
@@ -90,7 +91,15 @@ function Register() {
     setErrorMsg(validate(formValues));
     setIsSubmit(true);
 
-    if (Object.keys(errorMsg).length === 0) {
+    if (
+      Object.keys(errorMsg).length === 0 &&
+      formValues.firstName.length !== 0 &&
+      formValues.lastName.length !== 0 &&
+      formValues.email.length !== 0 &&
+      formValues.mobile.length !== 0 &&
+      formValues.password.length !== 0 &&
+      formValues.confirmPassword.length !== 0
+    ) {
       createUserWithEmailAndPassword(
         auth,
         formValues.email,
@@ -113,7 +122,7 @@ function Register() {
             console.log(error);
           });
           alert("Registered Successfully");
-          navigate("/")
+          navigate("/");
         })
         .catch((error) => {
           setErrorCode(error.code);
@@ -123,8 +132,8 @@ function Register() {
   };
 
   useEffect(() => {
-    console.log(formValues)
-},[errorMsg])
+    console.log(formValues);
+  }, [errorMsg]);
 
   return (
     <React.Fragment>

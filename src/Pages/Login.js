@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import login from './login.png'
+import login from './Images/login.png'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router'
+import './pages.css'
 
 function Login() {
 
@@ -50,7 +51,7 @@ function Login() {
         setErrorMsg(validate(formValues))
         setIsSubmit(true)
         
-        if(Object.keys(errorMsg).length === 0){
+        if(Object.keys(errorMsg).length === 0 && formValues.email.length !== 0 && formValues.password.length !== 0){
             signInWithEmailAndPassword(auth, formValues.email, formValues.password).then((userCredential) => {
                 const user = userCredential.user;
                 console.log(user)

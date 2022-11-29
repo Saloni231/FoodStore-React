@@ -1,5 +1,6 @@
 import React from "react";
-import companyLogo from "./food.jpg";
+import companyLogo from "./Images/food.jfif";
+import './pages.css'
 
 export default function ContactUs() {
   return (
