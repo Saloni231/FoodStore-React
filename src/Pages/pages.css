@@ -1,43 +1,82 @@
-.login-card{
-    margin: 80px;
-    margin-left: 100px;
-    width: 420px;
-    padding: 40px;
-  }
+.login-card {
+  margin: 80px;
+  margin-left: 100px;
+  width: 420px;
+  padding: 40px;
+}
+
+.signup-card {
+  margin: 40px;
+  margin-left: 60px;
+  width: 600px;
+  padding: 20px;
+}
+
+#heading {
+  font-weight: bold;
+  font-size: medium;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#signUpHeading {
+  font-weight: bold;
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: red;
+}
+
+#img {
+
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  margin-top: -96px;
+  height: 400px;
+  width: 450px;
+}
+
+#backColor {
+  background-color: tomato;
+}
+
+.containerbg{
+  background-color: #c3c312;
+}
+.imgPlate{
+  float: center;
+  margin-top: 10px;
+  width: 70px;
+  height: 70px;
+}
+.lnkcolor{
+  color: white;
   
-  .signup-card{
-    margin: 40px;
-    margin-left: 60px;
-    width: 600px;
-    padding: 20px;
-  }
-  
-  #heading{
-    font-weight: bold;
-    font-size: medium;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  
-  #signUpHeading{
-    font-weight: bold;
-    font-size: small;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  p{
-    color: red;
-  }
-  
-  #img {
-  
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    margin-top: -96px;
-    height: 400px;
-    width: 450px;
-   }
-  
-  #backColor{
-    background-color: tomato;
-  }
+}
+
+.yello{
+  background-color: rgb(208, 178, 10);
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  margin-top: 53px;
+}
+#parent{
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
+#parent img{
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 103px;
+  left: 30px;
+}
+
+.alignBtnGroup{
+  float: right;
+  padding-right: 10px;
+}

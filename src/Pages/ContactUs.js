@@ -1,10 +1,10 @@
 import React from "react";
 import companyLogo from "./Images/food.jfif";
-import './pages.css'
+import "./pages.css";
 
 export default function ContactUs() {
   return (
-    <div class="row" style={{padding: "47px", margin:"20px"}}>
+    <div class="row" style={{ padding: "47px", margin: "20px" }}>
       <div class="col">
         <h1>
           {" "}
@@ -40,7 +40,11 @@ export default function ContactUs() {
             rows="3"
             placeholder="Message"
           ></textarea>
-          <button type="button" class="btn btn-dark" style={{marginTop: "10px"}}>
+          <button
+            type="button"
+            class="btn btn-dark"
+            style={{ marginTop: "10px" }}
+          >
             Submit
           </button>
         </form>
@@ -51,7 +55,7 @@ export default function ContactUs() {
           id="img"
           className="img-fluid rounded-start"
           alt="..."
-          style={{width: "400px", height: "350px"}}
+          style={{ width: "400px", height: "350px" }}
         />
       </div>
     </div>
