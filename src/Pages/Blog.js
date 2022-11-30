@@ -1,7 +1,6 @@
 import React from "react";
 import "./pages.css";
-import { Card, CardGroup, Col, Container, Row } from "react-bootstrap";
-import about from "./Images/about.png";
+import { Card, CardGroup, Container, Row } from "react-bootstrap";
 
 function Blog() {
   return (
@@ -15,7 +14,7 @@ function Blog() {
         }}
       />
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <img src={about} className="imgPlate" />
+        <img src={require("./Images/about.png")} className="imgPlate" />
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div

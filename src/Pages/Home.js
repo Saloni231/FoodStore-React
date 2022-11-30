@@ -1,6 +1,5 @@
 import React from "react";
 import "./pages.css";
-import burger from "./Images/burger.png";
 import LocalizedStrings from "react-localization";
 import { useNavigate } from "react-router-dom";
 
@@ -28,7 +27,7 @@ let strings = new LocalizedStrings({
 function Home() {
   const navigate = useNavigate();
   return (
-    <div class="row" style={{ marginLeft: "150px", marginTop: "57px" }}>
+    <div class="row" style={{ marginLeft: "150px", marginTop: "50px", paddingBottom: "7px"}}>
       <div class="col-4">
         <h1 style={heading}>{strings.title}</h1>
         <br />
@@ -49,7 +48,7 @@ function Home() {
       </div>
       <div class="col-8">
         <img
-          src={burger}
+          src={require("./Images/burger.png")}
           id="burgerimg"
           className="img-fluid rounded-start"
           alt="burger"

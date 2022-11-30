@@ -1,6 +1,5 @@
 import { getDatabase, ref, set, push } from "firebase/database";
 import React, { useState } from "react";
-import companyLogo from "./Images/food.jfif";
 import "./pages.css";
 
 export default function ContactUs() {
@@ -91,7 +90,7 @@ export default function ContactUs() {
       </div>
       <div class="col">
         <img
-          src={companyLogo}
+          src={require("./Images/food.jfif")}
           id="img"
           className="img-fluid rounded-start"
           alt="..."

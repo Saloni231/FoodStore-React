@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ref, onValue } from "firebase/database";
 import { db } from "../index";
-import profile from "./Images/profile.webp";
 import "./pages.css";
 
 function Profile() {
@@ -13,6 +12,7 @@ function Profile() {
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [gender, setGender] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
 
@@ -32,6 +32,7 @@ function Profile() {
           if (user.email.toLowerCase() === auth.currentUser.email) {
             setFirstName(user.firstName);
             setLastName(user.lastName);
+            setGender(user.gender);
             setEmail(user.email);
             setMobile(user.mobile);
           }
@@ -41,36 +42,43 @@ function Profile() {
   });
 
   const cardCss = {
-    width: "500px",
-    marginTop: "43px",
+    width: "400px",
     height: "400px",
-    marginBottom: "40px",
+    margin: "40px",
     background: "rgb(255,200,0)",
-    padding: "30px",
     fontFamily: "Georgia",
     fontSize: "18px",
+    textAlign: 'center',
+    padding: "20px"
   };
 
   return (
     <React.Fragment>
-      <div className="row">
-        <div className="col-3"></div>
+      <div className="row backImg">
+        <div className="col-6"></div>
         <div class="card col-7" style={cardCss}>
-          <img
-            src={profile}
-            class="card-img-top center"
-            alt="..."
-            style={{ width: "120px", height: "120px", marginLeft: "38%" }}
-          />
-          <div class="card-body" style={{ textAlign: "center" }}>
-            <p class="card-text text-dark">First Name : {firstName}</p>
-            <p class="card-text text-dark">Last Name : {lastName}</p>
-            <p class="card-text text-dark">Email : {email}</p>
-            <p class="card-text text-dark">Mobile : {mobile}</p>
-            <button type="button" class="btn btn-dark" onClick={signingOut}>
-              Sign Out
-            </button>
+          <div class="image">
+            {gender === 'M' ?
+            <img
+              src="https://semantic-ui.com/images/avatar2/large/matthew.png"
+              style={{height: "200px", width: "350px"}}
+            /> : <img
+            src="https://semantic-ui.com/images/avatar2/large/kristy.png"
+            style={{height: "200px", width: "350px"}}
+          />}
           </div>
+          <div class="content" style={{padding: "15px"}}>
+            <div class="header">
+              {firstName} {lastName}
+            </div>
+            <div class="meta">
+              <a>{email}</a>
+            </div>
+            <div class="description">{mobile}</div>
+          </div>
+          <div class="extra content">
+          <button class="ui inverted black button" onClick={signingOut}>Sign Out</button>
+    </div>
         </div>
       </div>
     </React.Fragment>

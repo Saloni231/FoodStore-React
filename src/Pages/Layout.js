@@ -1,8 +1,7 @@
 import { getAuth } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink, Outlet, useNavigate, Link } from "react-router-dom";
 import registered from "./Images/r-circle.svg";
-import logo from "./Images/Food store-1.png";
 import "./pages.css";
 
 function Layout() {
@@ -38,7 +37,7 @@ function Layout() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <Link className="item" to={"/"}>
-              <img src={logo} style={{ width: "60px", height: "50px" }} />
+              <img src={require("./Images/Food store-1.png")} style={{ width: "60px", height: "50px" }} />
               <div
                 style={{
                   fontWeight: "bold",

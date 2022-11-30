@@ -1,9 +1,8 @@
 import React from "react";
-import { Card, Col, Container, Figure, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { IconContext } from "react-icons";
 import { BsArrowRight } from "react-icons/bs";
 import "./pages.css";
-import about from "./Images/about.png";
 
 function About() {
   return (
@@ -17,7 +16,7 @@ function About() {
         }}
       />
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <img src={about} className="imgPlate" />
+        <img src={require("./Images/about.png")} className="imgPlate" />
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div
@@ -59,7 +58,7 @@ function About() {
                           Japanese, Chinese, American, Cajun, Thai, African,
                           Indian and Nepalese.
                         </div>
-                        <Card.Link href="#" className="lnkcolor">
+                        <Card.Link href="https://iamafoodblog.com/" className="lnkcolor" target="_blank">
                           <div style={{ marginTop: "25px" }}>
                             Read More{" "}
                             <IconContext.Provider value={{ color: "white" }}>

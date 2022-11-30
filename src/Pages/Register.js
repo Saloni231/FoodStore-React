@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { getDatabase, ref, set, push } from "firebase/database";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router";
-import signUp from "./Images/signUp.webp";
 import { Form } from "semantic-ui-react";
 import "./pages.css";
 
@@ -11,7 +10,7 @@ function Register() {
   const navigate = useNavigate();
 
   const background = {
-    "background-color": "tomato",
+    "background-color": "rgb(255,200,0)"
   };
 
   const heading = {
@@ -31,6 +30,7 @@ function Register() {
     mobile: "",
     password: "",
     confirmPassword: "",
+    gender: ""
   };
   const [formValues, setFormValues] = useState(inputs);
   const [errorMsg, setErrorMsg] = useState({});
@@ -38,6 +38,8 @@ function Register() {
   const [isSubmit, setIsSubmit] = useState(false);
 
   const inputChange = (event) => {
+    console.log(event.target.value)
+    console.log(event.target.name)
     const { name, value } = event.target;
     setFormValues({ ...formValues, [name]: value });
     console.log(value);
@@ -59,6 +61,10 @@ function Register() {
     }
     if (!values.lastName) {
       errors.lastName = "Last Name is required";
+    }
+    console.log(values.gender)
+    if (!values.gender) {
+      errors.gender = "Gender is required";
     }
     if (!values.mobile) {
       errors.mobile = "Mobile is required!";
@@ -117,6 +123,7 @@ function Register() {
           set(newUserRef, {
             firstName: formValues.firstName,
             lastName: formValues.lastName,
+            gender: formValues.gender,
             email: formValues.email,
             mobile: formValues.mobile,
             password: formValues.password,
@@ -188,6 +195,17 @@ function Register() {
                   </div>
                 </div>
               </div>
+  <div class="field">
+  <h5 id="signUpHeading">Gender</h5>
+    <select name="gender" onChange={inputChange}>
+      <option value="">Gender</option>
+      <option value="M">Male</option>
+      <option value="F">Female</option>
+    </select>
+    {Object.keys(errorMsg).length !== 0 ? (
+                  <p>{errorMsg.gender}</p>
+                ) : null}
+  </div>
               <div className="field">
                 <h5 id="signUpHeading">Email ID</h5>
                 <div className="ui left icon input">
@@ -264,7 +282,7 @@ function Register() {
             style={{ height: "500px", width: "500px", margin: "20px" }}
           >
             <img
-              src={signUp}
+              src={require("./Images/signUp.webp")}
               className="img-fluid rounded-start"
               alt="..."
               style={{ height: "450px" }}

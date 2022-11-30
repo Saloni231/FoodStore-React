@@ -39,7 +39,7 @@ p {
 }
 
 .containerbg {
-  background-color: #c3c312;
+  background-color: #FFD700;
 }
 
 .imgPlate {
@@ -55,7 +55,7 @@ p {
 }
 
 .yello {
-  background-color: rgb(208, 178, 10);
+  background-color: rgb(255, 200, 0);
   width: 300px;
   height: 250px;
   position: absolute;
@@ -101,4 +101,13 @@ p {
 .rowpadding {
   padding-left: 2cm;
   padding-right: 2cm;
+}
+
+.backImg{
+  background-image: url("./Images/profileBack.jpg");
+  height: 483px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }

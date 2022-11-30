@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import login from "./Images/login.png";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router";
 import "./pages.css";
@@ -74,10 +73,10 @@ function Login() {
 
   return (
     <React.Fragment>
-      <div className="ui two column grid">
+      <div className="ui two column grid" style={{background: "rgb(255,200,0)"}}>
         <div className="middle aligned column">
           <img
-            src={login}
+            src={require("./Images/login.png")}
             className="img-fluid rounded-start"
             alt="login"
             style={{ height: "400px", marginLeft: "80px" }}
