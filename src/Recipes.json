@@ -1,0 +1,76 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Dal",
+            "price": 10,
+            "image": "https://img.freepik.com/free-photo/traditional-indian-soup-lentils-indian-dhal-spicy-curry-bowl-spices-herbs-rustic-black-wooden-table_2829-18717.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Paneer",
+            "price": 20,
+            "image": "https://img.freepik.com/free-photo/vertical-shot-traditional-indian-paneer-butter-masala-cheese-cottage-curry-black-surface_181624-32001.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Paratha",
+            "price": 10,
+            "image": "https://img.freepik.com/free-photo/aloo-paratha-gobi-paratha-also-known-as-potato-cauliflower-stuffed-flatbread-dish-originating-from-indian-subcontinent_466689-76173.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Misal",
+            "price": 10,
+            "image": "https://img.freepik.com/free-photo/misal-pav-is-popular-maharashtrian-street-food-usal-sprouts-curry-topped-with-onions-tomatoes-farsan-chutney_466689-74294.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Veg Thali",
+            "price": 15,
+            "image": "https://img.freepik.com/premium-photo/typical-healthy-maharashtrian-food-platter-thali-full-nutrients-selective-focus_466689-68707.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Dhokla",
+            "price": 10,
+            "image": "https://img.freepik.com/free-photo/gujarati-khaman-dhokla-made-using-chana-dal-served-with-green-chutney-selective-focus_466689-71727.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Sandwich",
+            "price": 5,
+            "image": "https://img.freepik.com/premium-photo/two-sandwiches-made-slice-meat-cheese-tomatoes-toasted-bread-wooden-table_244366-394.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Gulab Jamun",
+            "price": 10,
+            "image": "https://img.freepik.com/free-photo/indian-sweet-food-gulab-jamun-served-round-ceramic-bowl_466689-71987.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Noodles",
+            "price": 10,
+            "image": "https://img.freepik.com/free-photo/schezwan-noodles-szechwan-vegetable-hakka-noodles-chow-mein-is-popular-indo-chinese-recipes-served-bowl-plate-with-wooden-chopsticks_466689-74642.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Jalebi",
+            "price": 10,
+            "image": "https://img.freepik.com/free-photo/stock-photo-jalebi-jilbi-imarati-indian-sweet-food-fried-pure-ghee-selective-focus_466689-71704.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Pakoras",
+            "price": 5,
+            "image": "https://img.freepik.com/free-photo/group-indian-tea-time-snacks-samosa-kachori-aloo-bonda-onion-pakora-moong-vada-chilli-fritter-etc_466689-72716.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Kachori",
+            "price": 5,
+            "image": "https://img.freepik.com/free-photo/kachori-is-flat-spicy-snack-from-india-also-spelled-as-kachauri-kachodi-served-with-tomato-ketchup-selective-focus_466689-72821.jpg"
+        }
+    ]
+}
