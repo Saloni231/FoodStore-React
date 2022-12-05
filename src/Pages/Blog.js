@@ -42,7 +42,7 @@ function Blog() {
                 <Card.Body>
                   <Card.Title>
                     Vegan Chickpea Curry
-                    <div class="ui top left attached black label">
+                    <div className="ui top left attached black label">
                       02 FEB 2019
                     </div>
                   </Card.Title>
@@ -64,7 +64,7 @@ function Blog() {
                 <Card.Body>
                   <Card.Title>
                     Instant No Yeast Naan
-                    <div class="ui top left attached black label">
+                    <div className="ui top left attached black label">
                       02 FEB 2019
                     </div>
                   </Card.Title>
@@ -86,7 +86,7 @@ function Blog() {
                 />
                 <Card.Body>
                   <Card.Title>
-                    <div class="ui top left attached black label">
+                    <div className="ui top left attached black label">
                       02 FEB 2019
                     </div>
                     Vegan Curried Carrot Soup

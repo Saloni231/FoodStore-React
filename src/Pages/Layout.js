@@ -37,7 +37,10 @@ function Layout() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <Link className="item" to={"/"}>
-              <img src={require("./Images/Food store-1.png")} style={{ width: "60px", height: "50px" }} />
+              <img
+                src={require("./Images/Food store-1.png")}
+                style={{ width: "60px", height: "50px" }}
+              />
               <div
                 style={{
                   fontWeight: "bold",
@@ -117,15 +120,26 @@ function Layout() {
                 </button>
               ) : null}
               {app.currentUser ? (
+                <>
                 <NavLink
-                  className="item"
-                  to={"/Profile"}
-                  style={({ isActive }) =>
-                    isActive ? activeLink : nonActiveLink
-                  }
-                >
-                  Profile
-                </NavLink>
+                    className="item"
+                    to={"/Cart"}
+                    style={({ isActive }) =>
+                      isActive ? activeLink : nonActiveLink
+                    }
+                  >
+                    <i className="shopping basket icon"></i>Cart
+                  </NavLink>
+                  <NavLink
+                    className="item"
+                    to={"/Profile"}
+                    style={({ isActive }) =>
+                      isActive ? activeLink : nonActiveLink
+                    }
+                  >
+                    Profile
+                  </NavLink>
+                </>
               ) : null}
             </div>
           </div>

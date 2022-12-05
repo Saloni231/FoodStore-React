@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./pages.css";
+import axios from "axios";
 
 const imgCss = {
   width: "230px",
@@ -24,23 +25,37 @@ const heading = {
 };
 
 export class Recipes extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      recipes: [],
+    };
+  }
+
+  componentDidMount() {
+    axios.get("http://localhost:5000/data").then((response) => {
+      this.setState({ recipes: response.data });
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
         <h1 style={heading}>Our Recipes</h1>
         <div
           id="carouselExampleControls"
-          class="carousel slide"
+          className="carousel slide"
           data-bs-ride="carousel"
           style={{ marginTop: "100px", paddingBottom: "14px" }}
         >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
               <div
                 className="row"
                 style={{ marginLeft: "120px", marginRight: "100px" }}
               >
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/dal.webp")}
                     style={imgCss}
@@ -52,7 +67,7 @@ export class Recipes extends Component {
                     {"  "}10
                   </div>
                 </div>
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/paneer.webp")}
                     style={imgCss}
@@ -64,7 +79,7 @@ export class Recipes extends Component {
                     {"  "}20
                   </div>
                 </div>
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/paratha.webp")}
                     style={imgCss}
@@ -76,7 +91,7 @@ export class Recipes extends Component {
                     {"  "}10
                   </div>
                 </div>
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/Misal.webp")}
                     style={imgCss}
@@ -90,12 +105,12 @@ export class Recipes extends Component {
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
+            <div className="carousel-item">
               <div
                 className="row"
                 style={{ marginLeft: "120px", marginRight: "100px" }}
               >
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/vegThali.webp")}
                     style={imgCss}
@@ -107,7 +122,7 @@ export class Recipes extends Component {
                     {"  "}15
                   </div>
                 </div>
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/dhokla.webp")}
                     style={imgCss}
@@ -119,7 +134,7 @@ export class Recipes extends Component {
                     {"  "}10
                   </div>
                 </div>
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/food.jpg")}
                     style={imgCss}
@@ -131,7 +146,7 @@ export class Recipes extends Component {
                     {"  "}5
                   </div>
                 </div>
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/gulabJam.webp")}
                     style={imgCss}
@@ -145,12 +160,12 @@ export class Recipes extends Component {
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
+            <div className="carousel-item">
               <div
                 className="row"
                 style={{ marginLeft: "120px", marginRight: "100px" }}
               >
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/Noodles.webp")}
                     style={imgCss}
@@ -162,7 +177,7 @@ export class Recipes extends Component {
                     {"  "}10
                   </div>
                 </div>
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/jalebi.webp")}
                     style={imgCss}
@@ -174,7 +189,7 @@ export class Recipes extends Component {
                     {"  "}10
                   </div>
                 </div>
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/pakoras.webp")}
                     style={imgCss}
@@ -186,7 +201,7 @@ export class Recipes extends Component {
                     {"  "}5
                   </div>
                 </div>
-                <div class="col">
+                <div className="col">
                   <img
                     src={require("./Images/kachori.webp")}
                     style={imgCss}
@@ -202,22 +217,28 @@ export class Recipes extends Component {
             </div>
           </div>
           <button
-            class="carousel-control-prev"
+            className="carousel-control-prev"
             type="button"
             data-bs-target="#carouselExampleControls"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
           </button>
           <button
-            class="carousel-control-next"
+            className="carousel-control-next"
             type="button"
             data-bs-target="#carouselExampleControls"
             data-bs-slide="next"
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
       </React.Fragment>

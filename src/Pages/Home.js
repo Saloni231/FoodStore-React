@@ -27,8 +27,11 @@ let strings = new LocalizedStrings({
 function Home() {
   const navigate = useNavigate();
   return (
-    <div class="row" style={{ marginLeft: "150px", marginTop: "50px", paddingBottom: "7px"}}>
-      <div class="col-4">
+    <div
+      className="row"
+      style={{ marginLeft: "150px", marginTop: "50px", paddingBottom: "7px" }}
+    >
+      <div className="col-4">
         <h1 style={heading}>{strings.title}</h1>
         <br />
         <label style={subHeading}>
@@ -37,7 +40,7 @@ function Home() {
           a sliced bun or bread roll.
         </label>
         <button
-          class="ui inverted yellow button"
+          className="ui inverted yellow button"
           style={{ marginTop: "20px", marginBottom: "10px" }}
           onClick={() => {
             navigate("/Recipes");
@@ -46,7 +49,7 @@ function Home() {
           Order Now
         </button>
       </div>
-      <div class="col-8">
+      <div className="col-8">
         <img
           src={require("./Images/burger.png")}
           id="burgerimg"

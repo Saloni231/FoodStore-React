@@ -10,6 +10,8 @@ import ContactUs from "./Pages/ContactUs";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Profile from "./Pages/Profile";
+import RecipesPage from "./Pages/RecipesPage";
+import Cart from "./Pages/Cart";
 
 function App() {
   return (
@@ -19,12 +21,13 @@ function App() {
           <Route path="/" exact element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/About" element={<About />} />
-            <Route path="/Recipes" element={<Recipes />} />
+            <Route path="/Recipes" element={<RecipesPage />} />
             <Route path="/Blog" element={<Blog />} />
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} />
             <Route path="/Profile" element={<Profile />} />
+            <Route path="/Cart" element={<Cart/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

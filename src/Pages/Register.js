@@ -6,11 +6,10 @@ import { Form } from "semantic-ui-react";
 import "./pages.css";
 
 function Register() {
-  
   const navigate = useNavigate();
 
   const background = {
-    "background-color": "rgb(255,200,0)"
+    "background-color": "rgb(255,200,0)",
   };
 
   const heading = {
@@ -30,7 +29,7 @@ function Register() {
     mobile: "",
     password: "",
     confirmPassword: "",
-    gender: ""
+    gender: "",
   };
   const [formValues, setFormValues] = useState(inputs);
   const [errorMsg, setErrorMsg] = useState({});
@@ -38,8 +37,8 @@ function Register() {
   const [isSubmit, setIsSubmit] = useState(false);
 
   const inputChange = (event) => {
-    console.log(event.target.value)
-    console.log(event.target.name)
+    console.log(event.target.value);
+    console.log(event.target.name);
     const { name, value } = event.target;
     setFormValues({ ...formValues, [name]: value });
     console.log(value);
@@ -62,7 +61,7 @@ function Register() {
     if (!values.lastName) {
       errors.lastName = "Last Name is required";
     }
-    console.log(values.gender)
+    console.log(values.gender);
     if (!values.gender) {
       errors.gender = "Gender is required";
     }
@@ -106,8 +105,7 @@ function Register() {
       formValues.mobile.length !== 0 &&
       formValues.password.length !== 0 &&
       formValues.confirmPassword.length !== 0
-    ) 
-    {
+    ) {
       createUserWithEmailAndPassword(
         auth,
         formValues.email,
@@ -154,7 +152,7 @@ function Register() {
             </h1>
             <br />
             {errorCode ? (
-              <div class="alert alert-danger" role="alert">
+              <div className="alert alert-danger" role="alert">
                 Email ID Already in Use.
               </div>
             ) : null}
@@ -195,17 +193,17 @@ function Register() {
                   </div>
                 </div>
               </div>
-  <div class="field">
-  <h5 id="signUpHeading">Gender</h5>
-    <select name="gender" onChange={inputChange}>
-      <option value="">Gender</option>
-      <option value="M">Male</option>
-      <option value="F">Female</option>
-    </select>
-    {Object.keys(errorMsg).length !== 0 ? (
+              <div className="field">
+                <h5 id="signUpHeading">Gender</h5>
+                <select name="gender" onChange={inputChange}>
+                  <option value="">Gender</option>
+                  <option value="M">Male</option>
+                  <option value="F">Female</option>
+                </select>
+                {Object.keys(errorMsg).length !== 0 ? (
                   <p>{errorMsg.gender}</p>
                 ) : null}
-  </div>
+              </div>
               <div className="field">
                 <h5 id="signUpHeading">Email ID</h5>
                 <div className="ui left icon input">

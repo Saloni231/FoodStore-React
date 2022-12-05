@@ -34,8 +34,11 @@ export default function ContactUs() {
   };
 
   return (
-    <div class="row" style={{ padding: "57px", background: "rgb(255,200,0)" }}>
-      <div class="col" style={{ marginLeft: "60px" }}>
+    <div
+      className="row"
+      style={{ padding: "57px", background: "rgb(255,200,0)" }}
+    >
+      <div className="col" style={{ marginLeft: "60px" }}>
         <h1>
           {" "}
           Request A <font color="#FFFFFF"> Call Back</font>
@@ -43,7 +46,7 @@ export default function ContactUs() {
         <br />
         <form className="ui form">
           <input
-            class="form-control"
+            className="form-control"
             id="inputdefault"
             type="text"
             placeholder="Name"
@@ -53,7 +56,7 @@ export default function ContactUs() {
           />{" "}
           <br />
           <input
-            class="form-control"
+            className="form-control"
             id="inputdefault"
             placeholder="Phone number"
             name="phone"
@@ -62,7 +65,7 @@ export default function ContactUs() {
           />
           <br />
           <input
-            class="form-control"
+            className="form-control"
             id="inputdefault"
             placeholder="Email Id"
             name="email"
@@ -80,7 +83,7 @@ export default function ContactUs() {
           ></textarea>
           <button
             type="button"
-            class="btn btn-dark"
+            className="btn btn-dark"
             style={{ marginTop: "10px" }}
             onClick={submitClicked}
           >

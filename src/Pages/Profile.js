@@ -48,37 +48,42 @@ function Profile() {
     background: "rgb(255,200,0)",
     fontFamily: "Georgia",
     fontSize: "18px",
-    textAlign: 'center',
-    padding: "20px"
+    textAlign: "center",
+    padding: "20px",
   };
 
   return (
     <React.Fragment>
       <div className="row backImg">
         <div className="col-6"></div>
-        <div class="card col-7" style={cardCss}>
-          <div class="image">
-            {gender === 'M' ?
-            <img
-              src="https://semantic-ui.com/images/avatar2/large/matthew.png"
-              style={{height: "200px", width: "350px"}}
-            /> : <img
-            src="https://semantic-ui.com/images/avatar2/large/kristy.png"
-            style={{height: "200px", width: "350px"}}
-          />}
+        <div className="card col-7" style={cardCss}>
+          <div className="image">
+            {gender === "M" ? (
+              <img
+                src="https://semantic-ui.com/images/avatar2/large/matthew.png"
+                style={{ height: "200px", width: "350px" }}
+              />
+            ) : (
+              <img
+                src="https://semantic-ui.com/images/avatar2/large/kristy.png"
+                style={{ height: "200px", width: "350px" }}
+              />
+            )}
           </div>
-          <div class="content" style={{padding: "15px"}}>
-            <div class="header">
+          <div className="content" style={{ padding: "15px" }}>
+            <div className="header">
               {firstName} {lastName}
             </div>
-            <div class="meta">
+            <div className="meta">
               <a>{email}</a>
             </div>
-            <div class="description">{mobile}</div>
+            <div className="description">{mobile}</div>
           </div>
-          <div class="extra content">
-          <button class="ui inverted black button" onClick={signingOut}>Sign Out</button>
-    </div>
+          <div className="extra content">
+            <button className="ui inverted black button" onClick={signingOut}>
+              Sign Out
+            </button>
+          </div>
         </div>
       </div>
     </React.Fragment>

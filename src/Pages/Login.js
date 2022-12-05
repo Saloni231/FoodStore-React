@@ -73,7 +73,10 @@ function Login() {
 
   return (
     <React.Fragment>
-      <div className="ui two column grid" style={{background: "rgb(255,200,0)"}}>
+      <div
+        className="ui two column grid"
+        style={{ background: "rgb(255,200,0)" }}
+      >
         <div className="middle aligned column">
           <img
             src={require("./Images/login.png")}
@@ -88,7 +91,7 @@ function Login() {
           </h1>
           <br />
           {errorCode ? (
-            <div class="alert alert-danger" role="alert">
+            <div className="alert alert-danger" role="alert">
               Incorrect Email ID or Password
             </div>
           ) : null}
