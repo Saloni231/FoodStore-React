@@ -4,6 +4,7 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router";
 import { Form } from "semantic-ui-react";
 import "./pages.css";
+import { db } from "../index";
 
 function Register() {
   const navigate = useNavigate();
@@ -17,8 +18,6 @@ function Register() {
     "font-size": "20px",
     "font-family": "Georgia",
   };
-
-  const database = getDatabase();
 
   const auth = getAuth();
 
@@ -115,7 +114,7 @@ function Register() {
           event.preventDefault();
           const user = userCredential.user;
           setErrorCode(null);
-          const userListRef = ref(database, "users/");
+          const userListRef = ref(db, "users/");
           const newUserRef = push(userListRef);
 
           set(newUserRef, {

@@ -91,7 +91,7 @@ export default function ContactUs() {
           </button>
         </form>
       </div>
-      <div class="col">
+      <div className="col">
         <img
           src={require("./Images/food.jfif")}
           id="img"

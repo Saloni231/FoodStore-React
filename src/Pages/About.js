@@ -6,6 +6,7 @@ import "./pages.css";
 
 function About() {
   return (
+    <React.Fragment>
     <div style={{ background: "white" }}>
       <hr
         style={{
@@ -87,6 +88,7 @@ function About() {
         </Container>
       </div>
     </div>
+    </React.Fragment>
   );
 }
 

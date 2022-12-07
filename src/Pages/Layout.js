@@ -61,7 +61,7 @@ function Layout() {
                   isActive ? activeLink : nonActiveLink
                 }
               >
-                Home
+                <i className="home icon"></i>Home
               </NavLink>
               <NavLink
                 className="item"
@@ -70,7 +70,7 @@ function Layout() {
                   isActive ? activeLink : nonActiveLink
                 }
               >
-                About
+                <i className="user icon"></i>About
               </NavLink>
               <NavLink
                 className="item"
@@ -79,7 +79,7 @@ function Layout() {
                   isActive ? activeLink : nonActiveLink
                 }
               >
-                Recipes
+                <i className="utensils icon"></i>Recipes
               </NavLink>
               <NavLink
                 className="item"
@@ -88,7 +88,7 @@ function Layout() {
                   isActive ? activeLink : nonActiveLink
                 }
               >
-                Blog
+                <i className="newspaper outline icon"></i>Blog
               </NavLink>
               <NavLink
                 className="item"
@@ -97,7 +97,7 @@ function Layout() {
                   isActive ? activeLink : nonActiveLink
                 }
               >
-                Contact us
+                <i className="comment outline icon"></i>Contact us
               </NavLink>
               {!app.currentUser ? (
                 <button
@@ -137,7 +137,7 @@ function Layout() {
                       isActive ? activeLink : nonActiveLink
                     }
                   >
-                    Profile
+                    <i class="user icon"></i>Profile
                   </NavLink>
                 </>
               ) : null}

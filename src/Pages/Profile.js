@@ -60,13 +60,13 @@ function Profile() {
           <div className="image">
             {gender === "M" ? (
               <img
-                src="https://semantic-ui.com/images/avatar2/large/matthew.png"
-                style={{ height: "200px", width: "350px" }}
+                src={require("./Images/maleProfile.png")}
+                style={{ height: "200px", width: "200px" }}
               />
             ) : (
               <img
-                src="https://semantic-ui.com/images/avatar2/large/kristy.png"
-                style={{ height: "200px", width: "350px" }}
+                src={require("./Images/femaleProfile.png")}
+                style={{ height: "200px", width: "200px" }}
               />
             )}
           </div>

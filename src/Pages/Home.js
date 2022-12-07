@@ -4,16 +4,16 @@ import LocalizedStrings from "react-localization";
 import { useNavigate } from "react-router-dom";
 
 const heading = {
-  "font-size": "55px",
-  "font-family": "Georgia",
+  "fontSize": "55px",
+  "fontFamily": "Georgia",
   color: "white",
-  "font-weight": "bolder",
-  "text-align": "left",
+  "fontWeight": "bolder",
+  "textAlign": "left",
 };
 
 const subHeading = {
-  "font-size": "15px",
-  "font-family": "Georgia",
+  "fontSize": "15px",
+  "fontFamily": "Georgia",
   color: "grey",
 };
 
@@ -27,9 +27,10 @@ let strings = new LocalizedStrings({
 function Home() {
   const navigate = useNavigate();
   return (
+    <div style={{ background: "black" }}>
     <div
       className="row"
-      style={{ marginLeft: "150px", marginTop: "50px", paddingBottom: "7px" }}
+      style={{ marginLeft: "150px", paddingTop: "50px", paddingBottom: "7px" }}
     >
       <div className="col-4">
         <h1 style={heading}>{strings.title}</h1>
@@ -57,6 +58,7 @@ function Home() {
           alt="burger"
         />
       </div>
+    </div>
     </div>
   );
 }

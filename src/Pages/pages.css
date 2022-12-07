@@ -111,14 +111,3 @@ p {
   background-size: cover;
   position: relative;
 }
-
-.emptyCartImg{
-  background-image: url('./Images/emptyCart.gif');
-  height: 500px;
-  width: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  align-self: center;
-}
