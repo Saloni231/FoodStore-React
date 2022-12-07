@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 import "./pages.css";
 import axios from "axios";
 
@@ -247,3 +247,4 @@ export class Recipes extends Component {
 }
 
 export default Recipes;
+*/
