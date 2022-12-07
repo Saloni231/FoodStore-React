@@ -1,9 +1,14 @@
-import { getDatabase, ref, set, push } from "firebase/database";
+import { ref, set, push } from "firebase/database";
 import React, { useState } from "react";
 import "./pages.css";
+import {db} from '../index'
+import { getAuth } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 export default function ContactUs() {
-  const database = getDatabase();
+  
+  const auth = getAuth();
+  const navigate = useNavigate();
 
   const inputs = {
     name: "",
@@ -19,8 +24,9 @@ export default function ContactUs() {
     setFormValues({ ...formValues, [name]: value });
   };
 
+
   const submitClicked = () => {
-    const userListRef = ref(database, "messages/");
+    const userListRef = ref(db, "messages/"+auth.currentUser.uid);
     const newUserRef = push(userListRef);
 
     set(newUserRef, {
@@ -31,6 +37,10 @@ export default function ContactUs() {
     }).catch((error) => {
       console.log(error);
     });
+
+    alert("Message Send Successfully!");
+          navigate("/");
+
   };
 
   return (
