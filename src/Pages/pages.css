@@ -111,3 +111,18 @@ p {
   background-size: cover;
   position: relative;
 }
+
+@media(prefers-reduced-motion: no-preference) {
+  #burgerimg{
+    animation: home-img infinite 10s ease-in-out;
+  }
+}
+
+@keyframes home-img {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
