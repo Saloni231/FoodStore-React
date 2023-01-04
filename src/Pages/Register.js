@@ -10,13 +10,13 @@ function Register() {
   const navigate = useNavigate();
 
   const background = {
-    "background-color": "rgb(255,200,0)",
+    "backgroundColor": "rgb(255,200,0)",
   };
 
   const heading = {
     height: "40px",
-    "font-size": "20px",
-    "font-family": "Georgia",
+    "fontSize": "20px",
+    "fontFamily": "Georgia",
   };
 
   const auth = getAuth();
@@ -36,11 +36,8 @@ function Register() {
   const [isSubmit, setIsSubmit] = useState(false);
 
   const inputChange = (event) => {
-    console.log(event.target.value);
-    console.log(event.target.name);
     const { name, value } = event.target;
     setFormValues({ ...formValues, [name]: value });
-    console.log(value);
 
     if (isSubmit) {
       setErrorMsg(validate(formValues));
@@ -60,7 +57,6 @@ function Register() {
     if (!values.lastName) {
       errors.lastName = "Last Name is required";
     }
-    console.log(values.gender);
     if (!values.gender) {
       errors.gender = "Gender is required";
     }

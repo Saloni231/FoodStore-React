@@ -100,6 +100,7 @@ function Layout() {
                 <i className="comment outline icon"></i>Contact us
               </NavLink>
               {!app.currentUser ? (
+                <>
                 <button
                   className="ui inverted yellow button"
                   onClick={() => {
@@ -108,8 +109,6 @@ function Layout() {
                 >
                   Login
                 </button>
-              ) : null}
-              {!app.currentUser ? (
                 <button
                   className="ui inverted button"
                   onClick={() => {
@@ -118,9 +117,9 @@ function Layout() {
                 >
                   Register
                 </button>
-              ) : null}
-              {app.currentUser ? (
-                <>
+                </>
+              ) : 
+              <>
                 <NavLink
                     className="item"
                     to={"/Cart"}
@@ -139,8 +138,7 @@ function Layout() {
                   >
                     <i class="user icon"></i>Profile
                   </NavLink>
-                </>
-              ) : null}
+                </>}
             </div>
           </div>
         </div>

@@ -1,11 +1,9 @@
 #login-card {
-  margin: 62.5px;
-  margin-left: 80px;
-  width: 400px;
-  padding: 16px;
+  width: 35%;
+  padding: 1.5%;
 }
 
-#signup-card {
+#signup-card {  
   margin: 40px;
   margin-left: 60px;
   width: 600px;
@@ -83,9 +81,8 @@ p {
 
 #burgerimg {
 
-  height: 400px;
-  width: 550px;
-  margin-left: 120px;
+  height: 350px;
+  width: 500px;
 }
 
 .cardimg {
@@ -114,7 +111,7 @@ p {
 
 @media(prefers-reduced-motion: no-preference) {
   #burgerimg{
-    animation: home-img infinite 10s ease-in-out;
+    animation: home-img 5s ease-in-out;
   }
 }
 
@@ -125,4 +122,8 @@ p {
   to {
     transform: scale(1);
   }
+}
+
+.toast-message{
+  width: 35vw;
 }

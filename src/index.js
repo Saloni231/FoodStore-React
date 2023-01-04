@@ -7,7 +7,8 @@ import 'semantic-ui-css/semantic.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { initializeApp } from "firebase/app";
 import { getDatabase } from 'firebase/database';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_TIR2DodJgLOPb3nkhKbm2kT9ZobZrng",

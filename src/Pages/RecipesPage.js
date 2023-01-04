@@ -4,6 +4,7 @@ import axios from "axios";
 import { getAuth } from "firebase/auth";
 import { ref, set, onValue, update, child, remove } from "firebase/database";
 import { db } from "../index";
+import { toast, ToastContainer } from 'react-toastify';
 
 function RecipesPage() {
   const auth = getAuth();
@@ -124,56 +125,69 @@ function RecipesPage() {
     });
   };
 
+  const showToast = () => {
+
+    if(!auth.currentUser) {
+    toast('Please Login / Sign Up to Add Item to Bag.', {
+      position: toast.POSITION.BOTTOM_LEFT,
+      style: {background: '#FFD700', width: '35vw', color: 'black'}
+    })
+  }
+  }
+
   return (
-    <>
       <React.Fragment>
-      <div style={{ background: "black" }}>
-        <h1 style={heading}>Our Recipes</h1>
-        <div className="row" style={{ margin: "50px", marginLeft: "70px" }}>
-          {recipes.map((recipe) => {
-            return (
-              <div className="col" style={{ padding: "20px" }} key={recipe.id}>
-                <img src={recipe.image} style={imgCss} alt={recipe.name} />
-                <div style={titleCss}>{recipe.name}</div>
-                <div style={titleCss}>
-                  <strong style={{ color: "yellow" }}>$</strong>
-                  {"  "}
-                  {recipe.price}
+        <div style={{ background: "black" }}>
+          <h1 style={heading}>Our Recipes</h1>
+          <div className="row" style={{ margin: "50px", marginLeft: "70px" }}>
+            {recipes.map((recipe) => {
+              return (
+                <div
+                  className="col"
+                  style={{ padding: "20px" }}
+                  key={recipe.id} onClick= {showToast}
+                >
+                  <img src={recipe.image} style={imgCss} alt={recipe.name} />
+                  <div style={titleCss}>{recipe.name}</div>
+                  <div style={titleCss}>
+                    <strong style={{ color: "yellow" }}>$</strong>
+                    {"  "}
+                    {recipe.price}
+                  </div>
+                  {auth.currentUser ? (
+                    recipe.count === undefined || recipe.count === 0 ? (
+                      <div
+                        className="ui icon inverted yellow basic button"
+                        onClick={() => addItemToCart({ recipe })}
+                        style={{ marginTop: "10px" }}
+                      >
+                        <i className="shopping basket icon"></i>
+                      </div>
+                    ) : (
+                      <div className="row" style={itemCountCss}>
+                        <div
+                          className="col-4"
+                          onClick={() => decreaseCount(recipe, recipe.count)}
+                        >
+                          <i className="minus icon"></i>
+                        </div>
+                        <div className="col-4">{recipe.count}</div>
+                        <div
+                          className="col-4"
+                          onClick={() => increaseCount(recipe, recipe.count)}
+                        >
+                          <i className="plus icon"></i>
+                        </div>
+                      </div>
+                    )
+                  ) : null}
                 </div>
-                {auth.currentUser ? (
-                  recipe.count === undefined || recipe.count === 0 ? (
-                    <div
-                      className="ui icon inverted yellow basic button"
-                      onClick={() => addItemToCart({ recipe })}
-                      style={{ marginTop: "10px" }}
-                    >
-                      <i className="shopping basket icon"></i>
-                    </div>
-                  ) : (
-                    <div className="row" style={itemCountCss}>
-                      <div
-                        className="col-4"
-                        onClick={() => decreaseCount(recipe, recipe.count)}
-                      >
-                        <i className="minus icon"></i>
-                      </div>
-                      <div className="col-4">{recipe.count}</div>
-                      <div
-                        className="col-4"
-                        onClick={() => increaseCount(recipe, recipe.count)}
-                      >
-                        <i className="plus icon"></i>
-                      </div>
-                    </div>
-                  )
-                ) : null}
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-        </div>
+        <ToastContainer />
       </React.Fragment>
-    </>
   );
 }
 

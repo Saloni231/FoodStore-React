@@ -39,7 +39,7 @@ function Profile() {
         });
       }
     });
-  });
+  }, []);
 
   const cardCss = {
     width: "400px",

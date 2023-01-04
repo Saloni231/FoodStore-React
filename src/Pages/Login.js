@@ -8,8 +8,8 @@ function Login() {
 
   const heading = {
     height: "40px",
-    "font-size": "20px",
-    "font-family": "Georgia",
+    "fontSize": "20px",
+    "fontFamily": "Georgia",
   };
 
   const auth = getAuth();
@@ -56,7 +56,6 @@ function Login() {
       signInWithEmailAndPassword(auth, formValues.email, formValues.password)
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
           alert("Logined Successfully");
           navigate("/");
           setErrorCode(null);
@@ -75,14 +74,14 @@ function Login() {
     <React.Fragment>
       <div
         className="ui two column grid"
-        style={{ background: "rgb(255,200,0)" }}
+        style={{ background: "rgb(255,200,0)" , padding: "4.65%"}}
       >
         <div className="middle aligned column">
           <img
             src={require("./Images/login.png")}
             className="img-fluid rounded-start"
             alt="login"
-            style={{ height: "400px", marginLeft: "80px" }}
+            style={{height: '350px'}}
           />
         </div>
         <div className="card border-dark" id="login-card">
@@ -97,7 +96,7 @@ function Login() {
           ) : null}
           <form
             className="ui form"
-            style={{ padding: "20px" }}
+            style={{ padding: "5%" }}
             onSubmit={loginClicked}
           >
             <div className="field">

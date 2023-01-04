@@ -46,9 +46,9 @@ export default function ContactUs() {
   return (
     <div
       className="row"
-      style={{ padding: "57px", background: "rgb(255,200,0)" }}
+      style={{ padding: "4.45%", background: "rgb(255,200,0)" }}
     >
-      <div className="col" style={{ marginLeft: "60px" }}>
+      <div className="col" style={{ marginLeft: "9%" }}>
         <h1>
           {" "}
           Request A <font color="#FFFFFF"> Call Back</font>
